@@ -83,7 +83,10 @@
   .shots figure{margin:0;}
   .shots .frame{position:relative;background:#eef2f7;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 44px rgba(17,31,53,.12);}
   .shots .frame::before{content:"";position:absolute;top:11px;left:14px;z-index:1;width:9px;height:9px;border-radius:50%;background:#ff5f57;box-shadow:16px 0 0 #febc2e,32px 0 0 #28c840;}
-  .shots .frame img{width:100%;height:auto;display:block;margin-top:32px;}
+  .shots .frame img{width:100%;height:auto;display:block;margin-top:32px;cursor:zoom-in;}
+  .lightbox{position:fixed;inset:0;background:rgba(8,15,30,.93);display:none;align-items:center;justify-content:center;z-index:60;cursor:zoom-out;padding:40px;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:95vw;max-height:92vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.6);}
   .shots figcaption{font-size:13.5px;color:var(--mut);margin-top:13px;font-weight:600;text-align:center;}
   @media(max-width:820px){.shots{grid-template-columns:1fr;}}
   .chip{background:var(--navy2);border:1px solid #233456;color:#cdd6e4;font-size:13px;font-weight:600;padding:9px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;}
@@ -119,10 +122,8 @@
 <header><div class="wrap">
   <a class="logo" href="#top"><svg class="mark" style="color:#fff"><use href="#mark"/></svg> Opsta <span style="opacity:.55;font-weight:500">AI Gateway</span></a>
   <nav>
-    <a href="#why" data-en="Why Opsta" data-th="ทำไมต้อง Opsta">Why Opsta</a>
     <a href="#capabilities" data-en="Capabilities" data-th="ฟีเจอร์หลัก">Capabilities</a>
-    <a href="#how" data-en="How it works" data-th="วิธีการทำงาน">How it works</a>
-    <a href="#security" data-en="Security" data-th="Security">Security</a>
+    <a href="#why" data-en="Why Opsta" data-th="ทำไมต้อง Opsta">Why Opsta</a>
     <a href="/use-cases.html" data-en="Use cases" data-th="Use Cases">Use cases</a>
     <a href="/pricing.html" data-en="Pricing" data-th="Pricing">Pricing</a>
     <a href="/datasheet.html" data-en="Datasheet" data-th="Datasheet">Datasheet</a>
@@ -230,7 +231,7 @@
 <section id="product" class="light" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
   <div class="eyebrow" data-en="See it in action" data-th="ดูการทำงานจริง">See it in action</div>
   <h2 style="margin-top:8px" data-en="A real product — not slideware." data-th="Product จริง ไม่ใช่แค่สไลด์">A real product — not slideware.</h2>
-  <p class="lead" style="max-width:660px;margin-top:12px" data-en="Cost, budgets, and self-hosted dashboards — actual screens from the console and observability stack, running entirely in your environment." data-th="Cost, Budget และ Dashboard แบบ Self-hosted — หน้าจอจริงจาก Console และ Observability Stack ที่รันอยู่ใน Environment ของคุณทั้งหมด">Cost, budgets, and self-hosted dashboards — actual screens from the console and observability stack, running entirely in your environment.</p>
+  <p class="lead" style="max-width:660px;margin-top:12px" data-en="Cost, budgets, and governance — actual screens from the console, running entirely in your environment." data-th="Cost, Budget และ Governance — หน้าจอจริงจาก Console ที่รันอยู่ใน Environment ของคุณทั้งหมด">Cost, budgets, and governance — actual screens from the console, running entirely in your environment.</p>
   <div class="shots">
     <figure>
       <div class="frame"><img src="/assets/shots/usage-overview.png" alt="Per-user budget and per-model cost in the console" loading="lazy"></div>
@@ -241,8 +242,8 @@
       <figcaption data-en="Hierarchical budgets — org → user" data-th="Budget แบบลำดับชั้น — Org → User">Hierarchical budgets — org → user</figcaption>
     </figure>
     <figure>
-      <div class="frame"><img src="/assets/shots/grafana-overview.png" alt="Self-hosted usage and cost dashboards" loading="lazy"></div>
-      <figcaption data-en="Self-hosted usage dashboards" data-th="Dashboard ด้าน Usage แบบ Self-hosted">Self-hosted usage dashboards</figcaption>
+      <div class="frame"><img src="/assets/shots/audit-log.png" alt="Audit log — every administrative action recorded" loading="lazy"></div>
+      <figcaption data-en="Every action audited" data-th="ทุก Action ถูก Audit">Every action audited</figcaption>
     </figure>
   </div>
   <div style="margin-top:30px"><a class="btn btn-primary" href="https://docs.ai-gateway.opsta.co.th" data-en="Explore the product docs →" data-th="ดู Product Docs →">Explore the product docs →</a></div>
@@ -359,5 +360,18 @@
   }
   function toggleLang(){ applyLang(document.documentElement.lang === 'th' ? 'en' : 'th'); }
   (function(){ var s; try { s = localStorage.getItem('lang'); } catch(e){} applyLang(s || 'en'); })();
+
+  // Click-to-fullscreen lightbox for the product screenshots.
+  (function(){
+    var lb = document.createElement('div');
+    lb.className = 'lightbox'; lb.innerHTML = '<img alt="">';
+    document.body.appendChild(lb);
+    var lbImg = lb.querySelector('img');
+    document.querySelectorAll('.shots .frame img').forEach(function(img){
+      img.addEventListener('click', function(){ lbImg.src = img.src; lb.classList.add('open'); });
+    });
+    lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') lb.classList.remove('open'); });
+  })();
 </script>
 </body></html>
