@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opsta AI Gateway — Product Datasheet</title>
+<meta name="description" content="Opsta AI Gateway product datasheet: capabilities, architecture, deployment, security & sovereignty, and editions. One governed control point for every LLM and AI-agent request, self-hosted on infrastructure you own.">
+<link rel="canonical" href="https://ai-gateway.opsta.co.th/datasheet.html">
+<meta name="theme-color" content="#111F35">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBH1TBSEQY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RBH1TBSEQY');
+</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Opsta AI Gateway">
+<meta property="og:title" content="Opsta AI Gateway — Product Datasheet">
+<meta property="og:description" content="Capabilities, architecture, deployment, security & sovereignty, and editions — one governed control point for every LLM and AI-agent request.">
+<meta property="og:url" content="https://ai-gateway.opsta.co.th/datasheet.html">
+<meta property="og:image" content="https://ai-gateway.opsta.co.th/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#111F35;--navy2:#16284a;--blue:#008BEA;--blue2:#0067b8;--green:#7aa800;--gold:#FFBE2C;
+        --ink:#1a2438;--mut:#5b6677;--line:#e3e8f0;--bg:#f6f8fb;}
+  *{box-sizing:border-box;margin:0;padding:0;font-family:'Montserrat',sans-serif;}
+  html.th *{font-family:'IBM Plex Sans Thai','Montserrat',sans-serif;}
+  body{color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  html.th body{line-height:1.7;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+  a{color:var(--blue2);}
+  header{position:sticky;top:0;z-index:9;background:rgba(17,31,53,.96);backdrop-filter:blur(8px);border-bottom:1px solid #1e2d49;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;}
+  .logo{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:17px;text-decoration:none;}
+  .logo .mark{width:26px;height:26px;}
+  header .act{display:flex;gap:10px;align-items:center;}
+  header a.lnk{color:#cdd6e4;text-decoration:none;font-size:14px;font-weight:500;}
+  .lang{font-size:13px;font-weight:700;color:#fff;background:none;border:1px solid #2b3a57;border-radius:8px;padding:6px 12px;cursor:pointer;}
+  .btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;padding:10px 18px;border-radius:9px;text-decoration:none;cursor:pointer;border:0;}
+  .btn-primary{background:var(--blue);color:#fff;}
+  .sheet{background:#fff;margin:26px auto;max-width:1080px;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(17,31,53,.08);}
+  .masthead{background:linear-gradient(160deg,#111F35,#16284a);color:#fff;padding:34px 40px;}
+  .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5cb8ff;}
+  .masthead h1{font-size:34px;font-weight:800;letter-spacing:-.6px;margin:8px 0 4px;}
+  .masthead .pos{color:#c2cbdb;font-size:15px;max-width:700px;}
+  .slogan{color:#7fd0ff;font-size:12px;font-weight:700;letter-spacing:.06em;margin-top:14px;}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .facts span{background:rgba(255,255,255,.12);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;}
+  .body{padding:30px 40px 38px;}
+  .sec{margin-top:30px;}
+  .sec:first-child{margin-top:0;}
+  h2{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue2);border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:16px;}
+  p{color:var(--mut);font-size:14.5px;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 26px;}
+  .cap h3{font-size:15px;font-weight:700;color:var(--ink);}
+  .cap p{font-size:13.5px;margin-top:2px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{width:210px;color:var(--ink);font-weight:700;}
+  td{color:var(--mut);}
+  .ed{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .edcard{border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+  .edcard.hl{background:linear-gradient(165deg,#0c4f86,#008BEA);border:0;color:#fff;}
+  .edcard h3{font-size:16px;color:var(--ink);}.edcard.hl h3{color:#fff;}
+  .edcard p{font-size:13px;margin-top:6px;}.edcard.hl p{color:#eaf5ff;}
+  .edcard ul{margin:12px 0 0 0;padding:0;list-style:none;}
+  .edcard li{font-size:13px;color:var(--mut);padding:4px 0 4px 20px;position:relative;}
+  .edcard.hl li{color:#fff;}
+  .edcard li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800;}
+  .edcard.hl li::before{color:#bfe6ff;}
+  .note{background:rgba(255,190,44,.1);border:1px solid rgba(255,190,44,.42);color:#8a6710;font-size:13px;font-weight:600;padding:12px 16px;border-radius:10px;margin-top:18px;}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+  .cta .btn-primary{background:var(--blue);}.cta .btn-d{border:1.5px solid var(--line);color:var(--ink);background:#fff;}
+  footer{color:var(--mut);font-size:12.5px;text-align:center;padding:8px 0 40px;}
+  @media (max-width:720px){.grid,.ed{grid-template-columns:1fr;}.masthead,.body{padding-left:24px;padding-right:24px;}th{width:auto;}}
+  @media print{
+    header,.cta,.noprint{display:none!important;}
+    body,.sheet{background:#fff;margin:0;box-shadow:none;border:0;border-radius:0;}
+    .masthead,.edcard.hl{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .sec{break-inside:avoid;}
+  }
+</style></head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="/"><svg class="mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="none" stroke="#fff" stroke-width="3"/><path d="M9 20 L20 9" stroke="#008BEA" stroke-width="3" stroke-linecap="round"/></svg> Opsta <span style="opacity:.55">AI Gateway</span></a>
+  <div class="act">
+    <a class="lnk" href="/" data-en="← Back to site" data-th="← กลับสู่เว็บไซต์">← Back to site</a>
+    <button class="lang" data-langbtn onclick="toggleLang()">ไทย</button>
+    <button class="btn btn-primary" onclick="window.print()" data-en="Print / Save as PDF" data-th="พิมพ์ / บันทึก PDF">Print / Save as PDF</button>
+  </div>
+</div></header>
+
+<div class="sheet">
+  <div class="masthead">
+    <div class="eyebrow" data-en="Product Datasheet" data-th="เอกสารข้อมูลผลิตภัณฑ์">Product Datasheet</div>
+    <h1>Opsta AI Gateway</h1>
+    <div class="pos" data-en="One governed control point for every LLM and AI-agent request — running entirely on infrastructure you own. Govern cost, access, and safety; keep your data in your environment." data-th="จุดควบคุมเดียวสำหรับทุก Request ของ LLM และ AI-agent — รันบน Infrastructure ที่คุณเป็นเจ้าของทั้งหมด ควบคุม Cost, Access และความปลอดภัย พร้อมเก็บข้อมูลไว้ใน Environment ของคุณ">One governed control point for every LLM and AI-agent request — running entirely on infrastructure you own. Govern cost, access, and safety; keep your data in your environment.</div>
+    <div class="slogan">The AI Platform Engineering</div>
+    <div class="facts">
+      <span data-en="Self-hosted on Kubernetes" data-th="รันบน Kubernetes ของคุณเอง">Self-hosted on Kubernetes</span>
+      <span data-en="OpenAI-compatible API" data-th="API เข้ากันได้กับ OpenAI">OpenAI-compatible API</span>
+      <span data-en="Air-gappable" data-th="รองรับ Air-gap">Air-gappable</span>
+      <span data-en="Multi-tenant" data-th="รองรับ Multi-tenant">Multi-tenant</span>
+      <span data-en="Console in EN + TH" data-th="Console ภาษาไทย + อังกฤษ">Console in EN + TH</span>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="sec">
+      <h2 data-en="What it is" data-th="คืออะไร">What it is</h2>
+      <p data-en="Opsta AI Gateway puts every large-language-model request and every AI-agent (MCP) tool call behind one governed gateway that runs in your own Kubernetes cluster. Teams keep using the OpenAI-compatible API they already know; the organization gains a single point to control spend, enforce access and safety policy, see usage, and keep an audit trail — without sending data to a third-party cloud." data-th="Opsta AI Gateway รวมทุก Request ของ LLM และทุก Tool Call ของ AI-agent (MCP) ไว้ภายใต้ Gateway เดียวที่รันใน Kubernetes Cluster ของคุณเอง ทีมงานยังใช้ OpenAI-compatible API แบบเดิมได้ ขณะที่องค์กรได้จุดควบคุมเดียวสำหรับดูแล Spend, บังคับใช้ Policy ด้าน Access และความปลอดภัย, ดู Usage และเก็บ Audit Trail — โดยข้อมูลไม่ถูกส่งออกไป Third-party Cloud">Opsta AI Gateway puts every large-language-model request and every AI-agent (MCP) tool call behind one governed gateway that runs in your own Kubernetes cluster. Teams keep using the OpenAI-compatible API they already know; the organization gains a single point to control spend, enforce access and safety policy, see usage, and keep an audit trail — without sending data to a third-party cloud.</p>
+    </div>
+
+    <div class="sec">
+      <h2 data-en="Capabilities" data-th="ความสามารถหลัก">Capabilities</h2>
+      <div class="grid">
+        <div class="cap"><h3 data-en="Cost governance" data-th="ควบคุม Cost">Cost governance</h3><p data-en="Hierarchical USD budgets — organization → project → group → user. The tightest applicable cap wins; spend is priced per token per model." data-th="จัดการ USD Budget แบบลำดับชั้น Org → Project → Group → User โดย Cap ที่เข้มที่สุดมีผลก่อน และคิด Cost ราย Token ตาม Model">Hierarchical USD budgets — organization → project → group → user. The tightest applicable cap wins; spend is priced per token per model.</p></div>
+        <div class="cap"><h3 data-en="Access &amp; identity" data-th="ควบคุม Access และ Identity">Access &amp; identity</h3><p data-en="API-key authentication, role-based access (platform / org admin / member), and SSO with per-organization IdP brokering (OIDC / SAML)." data-th="รองรับ API-key Auth, RBAC (Platform / Org admin / Member) และ SSO แบบ per-organization IdP Brokering (OIDC / SAML)">API-key authentication, role-based access (platform / org admin / member), and SSO with per-organization IdP brokering (OIDC / SAML).</p></div>
+        <div class="cap"><h3 data-en="Safety guardrails" data-th="Guardrails ด้านความปลอดภัย">Safety guardrails</h3><p data-en="Prompt-injection detection (pattern and embedding-based), optional PII masking, and per-project tuning — with a visible block trail." data-th="ตรวจจับ Prompt-injection ทั้งแบบ Pattern และ Embedding, รองรับ PII Masking และปรับแต่งราย Project พร้อมแสดง Trail ของสิ่งที่ถูกบล็อก">Prompt-injection detection (pattern and embedding-based), optional PII masking, and per-project tuning — with a visible block trail.</p></div>
+        <div class="cap"><h3 data-en="Model routing" data-th="Model Routing">Model routing</h3><p data-en="Stable logical model names mapped to any OpenAI-compatible provider or self-hosted model, configured per project — no app changes to switch providers." data-th="Map ชื่อ Model เชิง Logical ไปยัง Provider ที่เข้ากันได้กับ OpenAI หรือ Model ที่ Self-hosted ตั้งค่าราย Project โดยไม่ต้องแก้โค้ดเพื่อเปลี่ยน Provider">Stable logical model names mapped to any OpenAI-compatible provider or self-hosted model, configured per project — no app changes to switch providers.</p></div>
+        <div class="cap"><h3 data-en="Semantic cache" data-th="Semantic Cache">Semantic cache</h3><p data-en="Reuse answers for semantically similar prompts to cut latency and upstream spend, with cache-aware cost accounting." data-th="ใช้คำตอบซ้ำสำหรับ Prompt ที่มีความหมายใกล้เคียง ลด Latency และ Cost ฝั่ง Provider พร้อมคิด Cost แบบ Cache-aware">Reuse answers for semantically similar prompts to cut latency and upstream spend, with cache-aware cost accounting.</p></div>
+        <div class="cap"><h3 data-en="MCP gateway" data-th="MCP Gateway">MCP gateway</h3><p data-en="Give AI agents governed access to tools: register remote MCP servers per project, fronted with the same identity, isolation, and audit as LLM traffic." data-th="ให้ AI Agent เข้าถึง Tool ได้อย่างมีการควบคุม: ลงทะเบียน MCP Server ราย Project ภายใต้ Identity, Isolation และ Audit มาตรฐานเดียวกับ LLM Traffic">Give AI agents governed access to tools: register remote MCP servers per project, fronted with the same identity, isolation, and audit as LLM traffic.</p></div>
+        <div class="cap"><h3 data-en="Observability" data-th="Observability">Observability</h3><p data-en="Self-hosted usage, cost, and health dashboards with per-organization isolation — no telemetry leaves your environment." data-th="Dashboard ด้าน Usage, Cost และ Health แบบ Self-hosted พร้อมแยกข้อมูลราย Organization โดย Telemetry ไม่ออกจาก Environment ของคุณ">Self-hosted usage, cost, and health dashboards with per-organization isolation — no telemetry leaves your environment.</p></div>
+        <div class="cap"><h3 data-en="Audit &amp; compliance" data-th="Audit และ Compliance">Audit &amp; compliance</h3><p data-en="Every administrative action — including denied attempts — is recorded with actor, target, outcome, and status." data-th="ทุก Action ของผู้ดูแล รวมถึงครั้งที่ถูกปฏิเสธ จะถูกบันทึกพร้อม Actor, Target, ผลลัพธ์ และ Status">Every administrative action — including denied attempts — is recorded with actor, target, outcome, and status.</p></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2 data-en="Architecture &amp; deployment" data-th="สถาปัตยกรรมและการ Deploy">Architecture &amp; deployment</h2>
+      <p data-en="A control plane you own (backed by PostgreSQL, the single source of truth) continuously reconciles a data plane — the gateway that handles live traffic. Administrators change configuration in the web console or API; the gateway holds no configuration of its own, so there is no YAML to hand-edit and no configuration drift. The whole platform is one Helm chart, reproducible from code, and deploys standalone for pilots or highly available for production with a single toggle." data-th="Control Plane ที่คุณเป็นเจ้าของ (มี PostgreSQL เป็น Source of Truth) คอยประสาน (Reconcile) Data Plane ซึ่งก็คือ Gateway ที่รับ Traffic จริง ผู้ดูแลแก้ Config ผ่าน Web Console หรือ API ส่วน Gateway ไม่เก็บ Config ของตัวเอง จึงไม่มี YAML ให้แก้มือและไม่มี Config Drift ทั้งระบบเป็น Helm Chart เดียว ทำซ้ำได้จากโค้ด และ Deploy ได้ทั้งแบบ Standalone สำหรับ Pilot หรือ High-availability สำหรับ Production ด้วยการสลับค่าเดียว">A control plane you own (backed by PostgreSQL, the single source of truth) continuously reconciles a data plane — the gateway that handles live traffic. Administrators change configuration in the web console or API; the gateway holds no configuration of its own, so there is no YAML to hand-edit and no configuration drift. The whole platform is one Helm chart, reproducible from code, and deploys standalone for pilots or highly available for production with a single toggle.</p>
+    </div>
+
+    <div class="sec">
+      <h2 data-en="Security &amp; data sovereignty" data-th="Security และ Data Sovereignty">Security &amp; data sovereignty</h2>
+      <div class="grid">
+        <div class="cap"><h3 data-en="Your data stays put" data-th="ข้อมูลอยู่กับคุณ">Your data stays put</h3><p data-en="Request content, telemetry, identity, configuration, and audit all live in your cluster. The only egress is to the providers you explicitly configure." data-th="Request Content, Telemetry, Identity, Config และ Audit อยู่ใน Cluster ของคุณทั้งหมด มีเพียง Provider ที่คุณตั้งค่าเองเท่านั้นที่ข้อมูลออกไปถึง">Request content, telemetry, identity, configuration, and audit all live in your cluster. The only egress is to the providers you explicitly configure.</p></div>
+        <div class="cap"><h3 data-en="Runs air-gapped" data-th="รองรับ Air-gap">Runs air-gapped</h3><p data-en="Mirror every image into your registry; issue TLS from an internal CA; broker identity in-cluster. No internet egress required." data-th="Mirror ทุก Image เข้า Registry ของคุณ, ออก TLS จาก Internal CA และ Broker Identity ใน Cluster โดยไม่ต้องต่อ Internet">Mirror every image into your registry; issue TLS from an internal CA; broker identity in-cluster. No internet egress required.</p></div>
+        <div class="cap"><h3 data-en="Verified-identity RBAC" data-th="RBAC ที่ยืนยันตัวตนจริง">Verified-identity RBAC</h3><p data-en="Authorization is enforced on a verified token, not a trust-me header; org admins are scoped to their own organization." data-th="บังคับสิทธิ์จาก Token ที่ผ่านการ Verify ไม่ใช่ Header ที่เชื่อลอยๆ และ Org admin ถูกจำกัดเฉพาะ Organization ของตน">Authorization is enforced on a verified token, not a trust-me header; org admins are scoped to their own organization.</p></div>
+        <div class="cap"><h3 data-en="Hardened supply chain" data-th="Supply Chain ที่ Harden">Hardened supply chain</h3><p data-en="Pinned, vulnerability-scanned images; build-once / promote-by-retag, so the exact tested artifact is the one that ships." data-th="Image ถูก Pin เวอร์ชันและ Scan ช่องโหว่, ใช้แนวทาง Build-once / Promote-by-retag เพื่อให้ Artifact ที่ทดสอบแล้วคือตัวเดียวกับที่ขึ้น Production">Pinned, vulnerability-scanned images; build-once / promote-by-retag, so the exact tested artifact is the one that ships.</p></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2 data-en="At a glance" data-th="สรุปทางเทคนิค">At a glance</h2>
+      <table>
+        <tr><th data-en="Platform" data-th="แพลตฟอร์ม">Platform</th><td data-en="Kubernetes ≥ 1.28 (Gateway API); on-prem, private cloud, or air-gapped" data-th="Kubernetes ≥ 1.28 (Gateway API); On-prem, Private Cloud หรือ Air-gapped">Kubernetes ≥ 1.28 (Gateway API); on-prem, private cloud, or air-gapped</td></tr>
+        <tr><th data-en="Client interface" data-th="Interface ฝั่ง Client">Client interface</th><td data-en="OpenAI-compatible /v1 REST API; Model Context Protocol (MCP) for agent tools" data-th="OpenAI-compatible /v1 REST API; Model Context Protocol (MCP) สำหรับ Tool ของ Agent">OpenAI-compatible /v1 REST API; Model Context Protocol (MCP) for agent tools</td></tr>
+        <tr><th data-en="Providers" data-th="Providers">Providers</th><td data-en="OpenAI-compatible, DeepSeek, Anthropic, and self-hosted models (vLLM / Ollama / internal)" data-th="OpenAI-compatible, DeepSeek, Anthropic และ Model ที่ Self-hosted (vLLM / Ollama / ภายในองค์กร)">OpenAI-compatible, DeepSeek, Anthropic, and self-hosted models (vLLM / Ollama / internal)</td></tr>
+        <tr><th data-en="Identity" data-th="Identity">Identity</th><td data-en="OIDC / SAML via an in-cluster identity broker; per-organization SSO with just-in-time provisioning" data-th="OIDC / SAML ผ่าน Identity Broker ใน Cluster; SSO ราย Organization พร้อม Just-in-time Provisioning">OIDC / SAML via an in-cluster identity broker; per-organization SSO with just-in-time provisioning</td></tr>
+        <tr><th data-en="Tenancy" data-th="Tenancy">Tenancy</th><td data-en="Organization → Project → Group → User; isolation across keys, budgets, routing, telemetry, and tools" data-th="Organization → Project → Group → User; แยกขาดทั้ง Key, Budget, Routing, Telemetry และ Tool">Organization → Project → Group → User; isolation across keys, budgets, routing, telemetry, and tools</td></tr>
+        <tr><th data-en="Observability" data-th="Observability">Observability</th><td data-en="Self-hosted metrics, logs, and traces; per-organization dashboards" data-th="Metrics, Logs และ Traces แบบ Self-hosted; Dashboard ราย Organization">Self-hosted metrics, logs, and traces; per-organization dashboards</td></tr>
+        <tr><th data-en="Deployment" data-th="การ Deploy">Deployment</th><td data-en="Single Helm chart; standalone or high-availability; air-gap image mirroring; backup &amp; DR" data-th="Helm Chart เดียว; Standalone หรือ High-availability; Air-gap Image Mirroring; Backup และ DR">Single Helm chart; standalone or high-availability; air-gap image mirroring; backup &amp; DR</td></tr>
+        <tr><th data-en="Console" data-th="Console">Console</th><td data-en="Web console for admins and developers; English and Thai" data-th="Web Console สำหรับผู้ดูแลและนักพัฒนา; ภาษาไทยและอังกฤษ">Web console for admins and developers; English and Thai</td></tr>
+      </table>
+    </div>
+
+    <div class="sec">
+      <h2 data-en="Editions" data-th="รูปแบบการใช้งาน">Editions</h2>
+      <div class="ed">
+        <div class="edcard">
+          <h3 data-en="Self-managed" data-th="Self-managed">Self-managed</h3>
+          <p data-en="You run Opsta AI Gateway in your own environment under an Enterprise Product License." data-th="คุณรัน Opsta AI Gateway ใน Environment ของคุณเองภายใต้ Enterprise Product License">You run Opsta AI Gateway in your own environment under an Enterprise Product License.</p>
+          <ul>
+            <li data-en="Full product, deployed from one Helm chart" data-th="ได้ Product เต็ม Deploy จาก Helm Chart เดียว">Full product, deployed from one Helm chart</li>
+            <li data-en="Runs on your Kubernetes, including air-gapped" data-th="รันบน Kubernetes ของคุณ รวมถึงแบบ Air-gapped">Runs on your Kubernetes, including air-gapped</li>
+            <li data-en="Your team operates it" data-th="ทีมของคุณเป็นผู้ดูแลระบบ">Your team operates it</li>
+          </ul>
+        </div>
+        <div class="edcard hl">
+          <h3 data-en="Opsta Managed Service" data-th="Opsta Managed Service">Opsta Managed Service</h3>
+          <p data-en="Opsta operates the gateway in your environment with professional, trusted support." data-th="Opsta ดูแลการรัน Gateway ใน Environment ของคุณ ด้วย Support ที่เชื่อถือได้ระดับมืออาชีพ">Opsta operates the gateway in your environment with professional, trusted support.</p>
+          <ul>
+            <li data-en="24×7 operations and monitoring" data-th="ดูแลและ Monitor ตลอด 24×7">24×7 operations and monitoring</li>
+            <li data-en="Banking-grade SLA, trusted in regulated industries" data-th="SLA ระดับ Banking และได้รับความไว้วางใจในอุตสาหกรรมที่มี Regulation">Banking-grade SLA, trusted in regulated industries</li>
+            <li data-en="Upgrades, hardening, and incident response handled for you" data-th="ดูแล Upgrade, Hardening และ Incident Response ให้ทั้งหมด">Upgrades, hardening, and incident response handled for you</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note" data-en="Opsta AI Gateway is offered as an Enterprise Product License — it is not sold under, or as, an open-source license." data-th="Opsta AI Gateway ให้บริการในรูปแบบ Enterprise Product License — ไม่ได้ขายภายใต้หรือในรูปแบบ Open-source License">Opsta AI Gateway is offered as an Enterprise Product License — it is not sold under, or as, an open-source license.</div>
+    </div>
+
+    <div class="cta noprint">
+      <a class="btn btn-primary" href="https://www.opsta.co.th/contact/?utm_source=datasheet&utm_medium=web&utm_campaign=ai-gateway" data-en="Book a demo →" data-th="จองเดโม่ →">Book a demo →</a>
+      <a class="btn btn-d" href="https://docs.ai-gateway.opsta.co.th" data-en="Read the docs" data-th="อ่าน Docs">Read the docs</a>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Opsta (Thailand) Co., Ltd. · ai-gateway.opsta.co.th · The AI Platform Engineering</footer>
+
+<script>
+  function applyLang(l){
+    document.documentElement.lang = l;
+    document.documentElement.classList.toggle('th', l === 'th');
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var v = el.getAttribute(l === 'th' ? 'data-th' : 'data-en');
+      if (v != null) el.innerHTML = v;
+    });
+    var b = document.querySelector('[data-langbtn]');
+    if (b) b.textContent = (l === 'en') ? 'ไทย' : 'EN';
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  function toggleLang(){ applyLang(document.documentElement.lang === 'th' ? 'en' : 'th'); }
+  (function(){ var s; try { s = localStorage.getItem('lang'); } catch(e){} applyLang(s || 'en'); })();
+</script>
+</body></html>
