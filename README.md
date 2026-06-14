@@ -17,7 +17,11 @@ Public landing page for **Opsta AI Gateway**, live at **https://ai-gateway.opsta
 - All copy lives inline in `public/index.html` as `data-en` / `data-th` attribute pairs on each element.
 - To change a string, edit both the visible text and its `data-en` (and `data-th`) attribute.
 
-## TODO (post-launch)
-- **Thai copy polish** — the current Thai is a first-pass draft; replace with natural, native-polished copy (planned via Gemini at launch).
-- **Social card** — add a designed 1200×630 PNG OG image at `public/assets/og-image.png` and wire `og:image` / `twitter:image`.
-- Wire nav anchor links (`Why Opsta`, `Capabilities`, …) to section IDs.
+## Done
+- Thai copy — native, English-loanword wording (per the approved Opsta dictionary).
+- Social card — on-brand 1200×630 OG image at `public/assets/og-image.png`, wired into `og:image` / `twitter:image`.
+- Nav anchor links wired to section IDs (`#why`, `#capabilities`, `#how`, `#security`) with smooth scroll.
+
+## Possible future tweaks
+- Regenerate the OG card if the headline/brand changes (source: a standalone 1200×630 HTML rendered via headless Chrome).
+- Add more sections (pricing, customer logos, case studies) as the story grows.
