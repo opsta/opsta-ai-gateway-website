@@ -79,6 +79,13 @@
   .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;}
   .card .ic{width:46px;height:46px;border-radius:12px;background:#e8f3fd;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
   .card p{font-size:14.5px;margin-top:6px;}
+  .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;}
+  .shots figure{margin:0;}
+  .shots .frame{position:relative;background:#eef2f7;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 44px rgba(17,31,53,.12);}
+  .shots .frame::before{content:"";position:absolute;top:11px;left:14px;z-index:1;width:9px;height:9px;border-radius:50%;background:#ff5f57;box-shadow:16px 0 0 #febc2e,32px 0 0 #28c840;}
+  .shots .frame img{width:100%;height:auto;display:block;margin-top:32px;}
+  .shots figcaption{font-size:13.5px;color:var(--mut);margin-top:13px;font-weight:600;text-align:center;}
+  @media(max-width:820px){.shots{grid-template-columns:1fr;}}
   .chip{background:var(--navy2);border:1px solid #233456;color:#cdd6e4;font-size:13px;font-weight:600;padding:9px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;}
   .strip{display:flex;gap:12px;flex-wrap:wrap;}
   table{width:100%;border-collapse:collapse;margin-top:30px;font-size:14.5px;}
@@ -215,6 +222,28 @@
     <div class="card"><div class="ic"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3 data-en="Built for many teams" data-th="สร้างมาเพื่อรองรับการใช้งานหลายทีม">Built for many teams</h3><p data-en="True multi-tenancy — Organizations → Projects → Groups → Users — with per-team config, budgets, guardrails, and per-org dashboards." data-th="รองรับ Multi-tenancy อย่างแท้จริง (Organizations → Projects → Groups → Users) สามารถแยก Config, Budget, Guardrails รายทีม และมี Dashboard แยกตาม Org">True multi-tenancy — Organizations → Projects → Groups → Users — with per-team config, budgets, guardrails, and per-org dashboards.</p></div>
   </div>
   <div class="note"><b data-en="New" data-th="ใหม่">New</b> <span data-en="— MCP Gateway: govern your AI agents' tool traffic with the same auth, limits, and isolation." data-th="— MCP Gateway: ควบคุม Tool Traffic ของ AI Agents ด้วย Auth, Limits และ Isolation มาตรฐานเดียวกัน">— MCP Gateway: govern your AI agents' tool traffic with the same auth, limits, and isolation.</span></div>
+</div></section>
+
+<!-- SEE IT IN ACTION -->
+<section id="product" class="light" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow" data-en="See it in action" data-th="ดูการทำงานจริง">See it in action</div>
+  <h2 style="margin-top:8px" data-en="A real product — not slideware." data-th="Product จริง ไม่ใช่แค่สไลด์">A real product — not slideware.</h2>
+  <p class="lead" style="max-width:660px;margin-top:12px" data-en="Cost, budgets, and self-hosted dashboards — actual screens from the console and observability stack, running entirely in your environment." data-th="Cost, Budget และ Dashboard แบบ Self-hosted — หน้าจอจริงจาก Console และ Observability Stack ที่รันอยู่ใน Environment ของคุณทั้งหมด">Cost, budgets, and self-hosted dashboards — actual screens from the console and observability stack, running entirely in your environment.</p>
+  <div class="shots">
+    <figure>
+      <div class="frame"><img src="/assets/shots/usage-overview.png" alt="Per-user budget and per-model cost in the console" loading="lazy"></div>
+      <figcaption data-en="Per-user budget &amp; per-model cost, live" data-th="Budget ราย User และ Cost ราย Model แบบ Real-time">Per-user budget &amp; per-model cost, live</figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="/assets/shots/budgets.png" alt="Hierarchical USD budgets across org, project, group, and user" loading="lazy"></div>
+      <figcaption data-en="Hierarchical budgets — org → user" data-th="Budget แบบลำดับชั้น — Org → User">Hierarchical budgets — org → user</figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="/assets/shots/grafana-overview.png" alt="Self-hosted usage and cost dashboards" loading="lazy"></div>
+      <figcaption data-en="Self-hosted usage dashboards" data-th="Dashboard ด้าน Usage แบบ Self-hosted">Self-hosted usage dashboards</figcaption>
+    </figure>
+  </div>
+  <div style="margin-top:30px"><a class="btn btn-primary" href="https://docs.ai-gateway.opsta.co.th" data-en="Explore the product docs →" data-th="ดู Product Docs →">Explore the product docs →</a></div>
 </div></section>
 
 <!-- WEDGE / COMPARISON -->
